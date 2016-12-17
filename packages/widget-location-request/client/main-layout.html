@@ -1,0 +1,78 @@
+
+<template name="mainLayoutLoc">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <header class="bz-material">
+        <nav>
+                <div class="nav-wrapper">
+                    <a href="/request-location" class="brand-logo">Виджет</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="sass.html">О виджете</a></li>
+                        <li><a href="badges.html">Связаться с разработчиком</a></li>
+                    </ul>
+                    <!--<a class="button-collapse" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a>-->
+                </div>
+        </nav>
+    </header>
+    <main class="bz-material">
+        {{> Template.dynamic template=main}}
+    </main>
+    <footer class="page-footer bz-material">
+        <div class="container">
+            <div class="row">
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">А еще</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="/locator/about">О виджете</a></li>
+                        <li><a class="grey-text text-lighten-3" href="/locator/contact">Связаться с разработчиком</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2016 Все права защищены
+                <a class="grey-text text-lighten-4 right" href="#!">О нас</a>
+            </div>
+        </div>
+    </footer>
+</template>
+<template name="mainLayoutLoc__">
+
+
+    <div id="bz-body-wrapper" class="mm-page mm-slideout">
+        <div id="bz-header">
+            <div class="bz-header-wrapper">
+                <!--**-->
+
+                <!--**-->
+            </div>
+        </div>
+
+        <div id="bz-content">
+
+            <div class="bz-block-light">
+                <div class="bz-container-body">
+                    {{> yield}}
+                </div>
+            </div>
+
+        </div>
+
+        <div id="bz-footer">
+            {{#if currentUser}}
+
+            {{/if}}
+        </div>
+
+        <!--MENU PANEL-->
+        <nav id="bz-menu">
+        </nav>
+
+
+        <!-- close the off-canvas menu -->
+        <a class="exit-off-canvas"></a>
+    </div>
+
+    <!-- open the off-canvas menu -->
+    <!--<a id="bz-open-toggle-menu" class="bz-open-off-canvas mm-slideout"><span></span></a>-->
+</template>
