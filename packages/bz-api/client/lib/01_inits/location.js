@@ -5,7 +5,7 @@
 var Location = {
     startWatchingLocation: function(){
         //report location only if logged in
-        if (Meteor.userId()) {
+        if (Meteor.userId && Meteor.userId()) {
             if (bz.help.maps.getIframeCoordinates()) {
                 geo_success({
                     coords: {
@@ -53,8 +53,3 @@ var Location = {
 };
 
 bz.help.makeNamespace('bz.help.location', Location);
-
-Meteor.startup(function(){
-    bz.help.location.startWatchingLocation();
-    document.addEventListener('resume', bz.help.location.startWatchingLocation, false);
-});
