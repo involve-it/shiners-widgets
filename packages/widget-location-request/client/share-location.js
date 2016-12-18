@@ -39,6 +39,9 @@ bz.bus.shareLocation = function () {
             });
 
         }, function (err) {
+            $('#modal1').modal('close');
+            bz.ui.alert('Ошибка запроса локации');
+            // bz.ui.alert( );
         }, options);
     });
 }
