@@ -26,3 +26,5 @@ matb33:collection-hooks
 softwarerero:accounts-t9n
 kadira:flow-router
 kadira:blaze-layout
+dburles:google-maps
+mdg:geolocation
