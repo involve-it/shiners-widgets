@@ -6,10 +6,8 @@ if (Meteor.isServer) {
   Meteor.publish('localQuestions', function(){
     return bz.cols.locationTrackings.find();
   });
-  Meteor.publish('localQuestions', function(trackId){
-    return bz.cols.locationTrackings.find({
-      trackId: trackId
-    });
+  Meteor.publish('localQuestion', function(id){
+    return bz.cols.locationTrackings.find(id);
   });
   Meteor.startup(function () {
     bz.cols.locationTrackings.allow({
