@@ -1,0 +1,33 @@
+<template name="locquestionLocation">
+    <div class="main-content">
+        <div class="section white">
+            <!--<div class="card">-->
+            <h5 class="header">Ввод адреса</h5>
+            <!--<input class="js-request-location-address" placeholder="Электронная почта или телефон пользователя"/>-->
+            <div class="row">
+                <div class="input-field">
+                    <a class="waves-effect waves-light btn js-use-current"><i class="material-icons right">my_location</i>Текущее положение</a>
+                    <label class="" for="first_name2"></label>
+                </div>
+                <div class="input-field">
+                    <input value="" id="first_name2" type="text" class="validate">
+                    <label class="" for="first_name2">Ввести адрес вручную</label>
+                </div>
+                <div class="input-field">
+                    <input value="" id="first_name1" type="text" class="validate js-request-location-map">
+                    <label class="" for="first_name2">Указать на карте</label>
+                </div>
+
+                <a href="/locquestion/question" class="waves-effect waves-light btn right">Далее >> </a>
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal Structure -->
+    <div id="modalWait" class="modal bottom-sheet">
+        <div class="modal-content">
+            <h4>Ожидание</h4>
+            <p>Происходит запрос локации ...</p>
+        </div>
+    </div>
+</template>

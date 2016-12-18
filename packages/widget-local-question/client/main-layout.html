@@ -1,0 +1,38 @@
+
+<template name="locquestionLayout">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <header class="bz-material">
+        <nav>
+                <div class="nav-wrapper red darken-4">
+                    <a href="/locquestion" class="brand-logo">Виджет</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="/locquestion/about">О виджете</a></li>
+                        <li><a href="mailto:bigmature@gmail.com">Связаться с разработчиком</a></li>
+                    </ul>
+                    <!--<a class="button-collapse" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a>-->
+                </div>
+        </nav>
+    </header>
+    <main class="bz-material">
+        {{> Template.dynamic template=main}}
+    </main>
+    <footer class="page-footer bz-material red darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">А еще</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="/locquestion/about">О виджете</a></li>
+                        <li><a class="grey-text text-lighten-3" href="mailto:info@shiners.ru">Связаться с разработчиком</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2017 Все права защищены
+                <a class="grey-text text-lighten-4 right" target="_blank" href="https://shiners.ru/about-us">О нас</a>
+            </div>
+        </div>
+    </footer>
+</template>
