@@ -10,6 +10,7 @@ if(Meteor.isClient){
 global.bz = global.bz || {};
 global.bz.cols = global.bz.cols || {};
 global.bz.runtime = global.bz.runtime || {};
+global.bz.bus = global.bz.bus || {};
 
 if(Meteor.isCordova)
 {
