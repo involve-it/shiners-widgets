@@ -1,6 +1,6 @@
 <template name="shareLocation">
     <div class="main-content">
-        <div class="bz-post-details" style="padding-top: 150px;">
+        <div class="bz-post-details js-ask-to-share" style="padding-top: 150px;">
 
             <div class="js-message-holder">
             </div>
@@ -9,6 +9,23 @@
             <br/>
             <i>Скоро в Дополненной Реальности!</i>
 
+        </div>
+        <div class="bz-post-details js-location-shared" style="display: none;">
+
+            <p>
+                Локация предоставлена, не закрывайте окно
+            </p>
+            <br/>
+            <br/>
+            <i>Скоро в Дополненной Реальности!</i>
+
+        </div>
+    </div>
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal bottom-sheet">
+        <div class="modal-content">
+            <h4>Ожидание</h4>
+            <p>Происходит запрос локации ...</p>
         </div>
     </div>
 </template>

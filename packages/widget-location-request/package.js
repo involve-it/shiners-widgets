@@ -16,29 +16,35 @@ Package.onUse(function (api) {
         'kadira:flow-router',
         'arutune:bz-api'
     ], ['client', 'server']);
- api.use(['materialize:materialize'
+    api.use([
+        'shiners:materialize'
     ], ['client']);
 
     api.use(['email'], 'server');
 
-     api.use(['templating', 'less', 'materialize:materialize'], 'client');
-     api.addFiles([
-     'client/main-layout.html',
-     'client/main-layout.js',
-     'client/main-layout.less',
-     'client/locator-home.html',
-     'client/request-location.html',
-     'client/request-location.js',
-     'client/share-location.html',
-     'client/share-location.js',
-     'client/view-location.html',
-     'client/view-location.js',
-     'client/router.js'
-     ], 'client');
-     api.addFiles(['server/main.js'], 'server');
+    api.use(['templating', 'less', 'materialize:materialize'], 'client');
+    api.addFiles([
+        'client/main-layout.html',
+        'client/main-layout.js',
+        'client/main-layout.less',
+        'client/locator-about.html',
+        'client/locator-home.html',
+        'client/request-location.html',
+        'client/request-location.js',
+        'client/share-location.html',
+        'client/share-location.js',
+        'client/view-location.html',
+        'client/view-location.js',
+        'client/router.js'
+    ], 'client');
+    api.addFiles(['server/main.js'], 'server');
 
-     api.addFiles(['data/collection.js'], ['client', 'server']);
+    api.addFiles(['data/collection.js'], ['client', 'server']);
 
+    api.addAssets([
+        'client/static/dog.jpg',
+        'client/static/map.png'
+    ], 'client');
     api.addFiles([
         'client/i18n/english.js',
         'client/i18n/russian.js',

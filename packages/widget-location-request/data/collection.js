@@ -13,6 +13,9 @@ if (Meteor.isServer) {
       },
       update: function() {
         return true;
+      },
+      remove: function() {
+        return true;
       }
     });
     bz.cols.locationTrackings.after.insert(function(userId, doc) {

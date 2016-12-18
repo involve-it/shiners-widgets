@@ -1,28 +1,33 @@
 <template name="requestLocation">
     <div class="section white">
-        <div class="row container">
-            <h5 class="header">Запрос положения пользователя</h5>
-            <!--<input class="js-request-location-address" placeholder="Электронная почта или телефон пользователя"/>-->
-            <div class="row">
-                <div class="input-field">
-                    <input value="" id="first_name2" type="text" class="validate js-request-location-address">
-                    <label class="" for="first_name2">Имейл или телефон пользователя</label>
-                </div>
-                <div class="input-field">
-                    <input value="" id="first_name1" type="text" class="validate js-request-location-message">
-                    <label class="" for="first_name2">Личное сообщение</label>
-                </div>
-            </div>
-            <br/>
-            <div class="row">
+        <div class="card js-form">
 
-                <a onClick="bz.bus.requestLocation()" class="waves-effect waves-light btn">Запросить</a>
-            </div>
-            <!--<button class="btn btn-info" onClick="bz.bus.requestLocation()">Запросить</button>-->
+            <div class="row container">
+                <h5 class="header">Запрос положения пользователя</h5>
+                <!--<input class="js-request-location-address" placeholder="Электронная почта или телефон пользователя"/>-->
+                <div class="row">
+                    <div class="input-field">
+                        <input value="" id="first_name2" type="text" class="validate js-request-location-address">
+                        <label class="" for="first_name2">Имейл или телефон пользователя</label>
+                    </div>
+                    <div class="input-field">
+                        <input value="" id="first_name1" type="text" class="validate js-request-location-message">
+                        <label class="" for="first_name2">Личное сообщение</label>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <a onClick="bz.bus.requestLocation()" class="waves-effect waves-light btn">Запросить</a>
+                </div>
+                <!--<button class="btn btn-info" onClick="bz.bus.requestLocation()">Запросить</button>-->
 
-            <!--<i>Скоро в Дополненной Реальности!</i>-->
-            <!--</div>-->
+                <!--<i>Скоро в Дополненной Реальности!</i>-->
+                <!--</div>-->
+            </div>
+        </div>
+        <div class="card js-wait" style="display: none;">
+            <h5 class="header">Ожидание ответа</h5>
+            <p>Не закрывайте окно</p>
         </div>
     </div>
-
 </template>
