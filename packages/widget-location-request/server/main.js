@@ -61,7 +61,10 @@ Meteor.methods({
     },
     'bz.initTrackedLocation': function (pos, trackId) {
         var ret;
-        if (pos && trackId) {
+        if (trackId) {
+            bz.cols.locationTrackings.remove({
+                trackId: trackId
+            });
             ret = bz.cols.locationTrackings.insert({
                 coords: pos,
                 status: 'started',
@@ -70,9 +73,16 @@ Meteor.methods({
         }
         return ret;
     },
-    'bz.sendTrackedLocation': function (loc, trackId) {
-        if (loc && trackId) {
-
+    'bz.updateTrackedLocation': function (pos, trackId) {
+        var ret;
+        if (pos && trackId) {
+            ret = bz.cols.locationTrackings.update({ trackId: trackId }, { $set: {
+                coords: pos,
+                status: 'updated',
+                target: null // stab for future (requester's loc to check if they are close)
+                // trackId: trackId
+            }})
         }
+        return ret && pos;
     }
 });

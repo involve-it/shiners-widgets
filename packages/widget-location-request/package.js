@@ -35,6 +35,9 @@ Package.onUse(function (api) {
         'client/share-location.js',
         'client/view-location.html',
         'client/view-location.js',
+        'client/google-map.html',
+        'client/google-map.js',
+        'client/google-map.less',
         'client/router.js'
     ], 'client');
     api.addFiles(['server/main.js'], 'server');

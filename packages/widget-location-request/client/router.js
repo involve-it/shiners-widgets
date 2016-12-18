@@ -9,6 +9,9 @@ FlowRouter.route('/locator/view-location', {
     name: 'viewLocation',
     action() {
         BlazeLayout.render('mainLayoutLoc', { main: 'viewLocation' });
+    },
+    subscriptions: function(params, query) {
+        this.register('myPost', Meteor.subscribe('locationTracking', query.trackId));
     }
 });
 FlowRouter.route('/locator/request-location', {

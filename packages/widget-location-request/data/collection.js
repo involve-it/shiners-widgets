@@ -6,6 +6,11 @@ if (Meteor.isServer) {
   Meteor.publish('locationTrackings', function(){
     return bz.cols.locationTrackings.find();
   });
+  Meteor.publish('locationTracking', function(trackId){
+    return bz.cols.locationTrackings.find({
+      trackId: trackId
+    });
+  });
   Meteor.startup(function () {
     bz.cols.locationTrackings.allow({
       insert: function() {

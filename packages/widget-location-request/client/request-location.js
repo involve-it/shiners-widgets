@@ -9,7 +9,6 @@ $(document).ready(function () {
     //Materialize.toast('Держитесь крепко-грузим виджет!', 5000) // 4000 is the duration of the toast
 });
 Template.requestLocation.onRendered(function () {
-    // debugger;
     Materialize.updateTextFields();
 });
 bz.bus.requestLocation = function () {
@@ -27,7 +26,7 @@ bz.bus.requestLocation = function () {
             bz.cols.locationTrackings.find({trackId: trackId});
             if (bz.cols.locationTrackings.find({trackId: trackId}).fetch().length) {
                 console.log('bz.bus.requestLocation, trackId=' + trackId);
-                FlowRouter.go(`viewLocation`, {}, {query: {trackId: trackId}});
+                FlowRouter.go(`viewLocation`, {}, { trackId: trackId });
             }
         })
 
