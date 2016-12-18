@@ -18,6 +18,7 @@ Package.onUse(function (api) {
     api.use(['anti:i18n', 'softwarerero:accounts-t9n'], ['client', 'server']);
     api.use(['ecmascript'], global.bzSettings.webBrowserArrayWithServer);
     api.use('service-configuration', ['server']);
+    api.use('shiners:materialize', ['client']);
 
     //api.use('iron:layout', ['client', 'server']);
     api.use(['underscore', 'session']);
@@ -32,6 +33,7 @@ Package.onUse(function (api) {
         'shared/lib/02_business/location.js'
     ]);
     api.addFiles([
+        'server/inits.js',
         'server/lib/config.js',
         'server/lib/accounts.js'
     ], 'server');
