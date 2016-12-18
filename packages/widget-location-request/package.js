@@ -22,7 +22,7 @@ Package.onUse(function (api) {
 
     api.use(['email'], 'server');
 
-    api.use(['templating', 'less', 'materialize:materialize'], 'client');
+    api.use(['templating', 'less'], 'client');
     api.addFiles([
         'client/main-layout.html',
         'client/main-layout.js',
